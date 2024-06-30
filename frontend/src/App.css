@@ -1,0 +1,147 @@
+html{
+  background-color: #ede3ff;
+}
+
+.app {
+  background-color: #ede3ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #4e2d8c;
+}
+
+.title {
+  margin: 3rem 3rem;
+}
+
+.wrapper {
+  min-width: 600px;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.altheaOutput {
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+.ingress_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(78, 45, 140, 0.2);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.ingress_form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.ingress_form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4e2d8c;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ingress_form button:hover {
+  background-color: #555;
+}
+
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, #4e2d8c 50%, transparent 50%);
+  background-size: 200% 100%;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scripted {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+ol {
+  animation: fade-in-up 1s ease-out;
+  padding: 0;
+  counter-reset: item;
+}
+
+ol li {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+  color: #4e2d8c;
+  border-bottom: 1px solid #4e2d8c;
+}
+
+ol li:before {
+  counter-increment: item;
+  content: counters(item, ".") ". ";
+  margin-right: 0.6em;
+  font-weight: bold;
+}
+
+.patientInfoHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+.patientInfo {
+  font-size: 1.2rem;
+}
+
+h6{
+  margin: 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+h3 {
+  margin: 0.5rem 0;
+}
